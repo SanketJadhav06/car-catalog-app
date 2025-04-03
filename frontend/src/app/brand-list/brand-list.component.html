@@ -1,0 +1,24 @@
+<div class="brand-container">
+  <div class="title">
+    <span class="welcome">Welcome to Apni Car</span>
+    <span class="search-container">
+      <input type="text" placeholder="Search Brand..." [(ngModel)]="searchTerm" (input)="filterBrands($event)" />
+      <i class="pi pi-search"></i> 
+    </span>
+  </div>
+  <div>
+    <div class="brand-selection">
+      <span class="select">Select a Brand</span>
+      <div class="brand-main-box">
+        <span *ngIf="filteredBrands.length === 0" class="no-results">No results found</span>
+        <span class="brand-box" *ngFor="let brand of filteredBrands" (click)="selectBrand(brand)">
+          {{ brand }}
+        </span>
+      </div>
+    </div>
+    <app-car-list *ngIf="selectedBrand && cars && cars.length > 0" 
+      [brand]="selectedBrand" 
+      [cars]="cars">
+    </app-car-list>
+  </div>
+</div>

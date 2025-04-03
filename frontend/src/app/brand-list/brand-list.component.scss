@@ -1,0 +1,57 @@
+.brand-container {
+  height: calc(100vh - 146px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-image: linear-gradient(89.49deg, #FFFFFF 0%, #E5F1F7 100%);
+  padding: 24px;
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+
+    .welcome {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    input {
+      border-radius: 12px;
+      height: 20px;
+      padding: 8px;
+    }
+  }
+
+  .brand-selection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    .select {
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .brand-main-box {
+      display: flex;
+      gap: 16px;
+  
+      .brand-box {
+        background: white;
+        padding: 15px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 5px;
+    
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

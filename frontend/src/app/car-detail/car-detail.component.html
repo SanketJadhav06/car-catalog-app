@@ -1,0 +1,25 @@
+<div class="backdrop" *ngIf="isOpen" (click)="close()"></div>
+
+<div class="car-details-container" *ngIf="isOpen">
+  <button class="close-btn" (click)="close()">✖</button>
+
+  <div class="color-preview" [style.backgroundColor]="selectedColor"></div>
+
+  <div class="details">
+    <div class="model">{{ car.name }}</div>
+    <div><strong>Price: </strong> <span>{{ car.price }}</span></div>
+    <div><strong>Year: </strong> <span>{{ car.year }}</span></div>
+    <div><strong>Variants: </strong> <span>{{ car.variants.join(', ') }}</span></div>
+    <div><strong>Accessories: </strong> <span>{{ car.accessories.join(', ') }}</span></div>
+    <div><strong>Features: </strong> <span>{{ car.features.join(', ') }}</span></div>
+    <div><strong>Available Colors: </strong></div>
+  </div>
+  <div class="color-buttons">
+    <button 
+      *ngFor="let color of car.colors" 
+      (click)="changeColor(color)" 
+      [style.backgroundColor]="color.toLowerCase()" 
+      class="color-btn">
+    </button>
+  </div>
+</div>

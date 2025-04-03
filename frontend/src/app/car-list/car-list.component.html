@@ -1,0 +1,14 @@
+<div class="car-list-container">
+  <h2>{{ brand }} Cars</h2>
+  <div *ngFor="let car of cars" class="car-box" (click)="selectCar(car)">
+    <h3>{{ car.name }}</h3>
+    <p>Price: {{ car.price }}</p>
+  </div>
+</div>
+
+<app-car-details 
+  *ngIf="isCarDetailsOpen" 
+  [car]="selectedCar" 
+  [isOpen]="isCarDetailsOpen"
+  (closeModal)="closeCarDetails()">
+</app-car-details>
