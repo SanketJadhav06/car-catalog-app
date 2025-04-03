@@ -22,7 +22,7 @@ ng serve          # Start the Angular development server
 
 npm install       # Install dependencies
 node src/app.js         # Start the Express server 
-✅ Runs at: http://localhost:3000/
+✅ Runs at: http://localhost:5000/
 
 3️⃣ Features Implemented
 ✅ Brand Selection & Filtering:
